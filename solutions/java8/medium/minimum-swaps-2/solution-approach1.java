@@ -6,7 +6,7 @@
 // Platform    HackerRank
 // Language    java8
 // Status      Accepted
-// Submitted   2026-09-06, 11:51 p.m.
+// Submitted   2026-09-06, 11:54 p.m.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
@@ -17,20 +17,17 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Solution 
+public class Solution
 {
     // Complete the minimumSwaps function below.
     static int minimumSwaps(int[] arr) {
     int ans = 0;
-
     for (int i = 0; i < arr.length; i++) {
-        while (arr[i] != i + 1) {
+        while(arr[i] != i + 1) {
             int correctIndex = arr[i] - 1;
-
             int temp = arr[i];
             arr[i] = arr[correctIndex];
             arr[correctIndex] = temp;
-
             ans++;
         }
     }
