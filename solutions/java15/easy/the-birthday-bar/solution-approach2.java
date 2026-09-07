@@ -6,7 +6,7 @@
 // Platform    HackerRank
 // Language    java15
 // Status      Accepted
-// Submitted   2026-09-02, 09:43 p.m.
+// Submitted   2026-09-07, 11:22 p.m.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
@@ -40,7 +40,6 @@ class Result {
     int sum=0;
     for(int r=0;r<s.size();r++){
         sum+=s.get(r);
-        
         while(r-l+1>m){
             sum-=s.get(l);
             l++;
@@ -48,8 +47,10 @@ class Result {
         if(r-l+1==m && sum==d){
             ans++;
         }
+        
     }
     return ans;
+    
 
     }
 
